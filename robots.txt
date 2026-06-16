@@ -1,0 +1,196 @@
+###############################################################################
+# ROBOTS.TXT - PRO ESTATE PARTNERS
+# https://proestatepartners.com/robots.txt
+#
+# Plik kontroluje dostęp crawlerów (botów) wyszukiwarek do strony.
+# Format: https://www.robotstxt.org/
+# Ostatnia aktualizacja: 2026-06-15
+###############################################################################
+
+
+###############################################################################
+# SEKCJA GLOBALNA - Wszystkie boty (User-agent: *)
+###############################################################################
+
+User-agent: *
+Allow: /
+
+# Opóźnienie crawlowania (ms) - zapobiega przeciążeniu serwera
+# Google i Bing: 0 - ignorują, używają Google Search Console/Bing Webmaster
+# Inne boty: 200-500 ms między requestami
+Crawl-delay: 0
+
+# Maksymalna liczba concurrent requestów (jeśli bot to wspiera)
+Request-rate: 30/1m
+
+# Ścieżki dostępne dla wszystkich botów (Allow)
+Allow: /
+Allow: *.html
+Allow: *.css
+Allow: *.js
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.gif
+Allow: *.svg
+Allow: *.webp
+Allow: /sitemap.xml
+Allow: /sitemap_index.xml
+
+# Ścieżki niedostępne dla botów (Disallow)
+# Uwaga: Pro Estate Partners - aktualnie wszystkie strony są publiczne
+# Disallow: /admin/              # Panel administracyjny (jeśli będzie)
+# Disallow: /private/            # Pliki prywatne
+# Disallow: /temp/               # Pliki tymczasowe
+# Disallow: /cache/              # Cache
+# Disallow: *.php                # Pliki PHP (jeśli nie chcemy indeksować)
+# Disallow: *?*                  # URL-i z parametrami query
+
+
+###############################################################################
+# SEKCJA GOOGLE - Googlebot (najważniejszy dla SEO)
+###############################################################################
+
+User-agent: Googlebot
+Allow: /
+Allow: *.html
+Allow: *.css
+Allow: *.js
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.gif
+Allow: *.svg
+Allow: *.webp
+
+# Google może crawlować bez limitów
+Crawl-delay: 0
+
+# Preferowana wersja strony (z lub bez www)
+# Jeśli używasz www.proestatepartners.com, zmień poniżej
+Prefer: https://proestatepartners.com
+
+
+###############################################################################
+# SEKCJA BING - Bingbot (drugi najważniejszy)
+###############################################################################
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+
+###############################################################################
+# SEKCJA FACEBOOK - Social Media Crawler
+###############################################################################
+
+User-agent: facebookexternalhit
+User-agent: Facebot
+Allow: /
+
+# Facebook crawluje Open Graph tagi (og:image, og:title, itd.)
+Crawl-delay: 0
+
+
+###############################################################################
+# SEKCJA SOCIAL MEDIA - Twitter, LinkedIn, itp.
+###############################################################################
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+
+###############################################################################
+# SEKCJA SPAM/BAD BOTS - Blokowanie niechcianych botów
+###############################################################################
+
+# MJ12bot - agresywny crawler
+User-agent: MJ12bot
+Disallow: /
+
+# AhrefsBot - agresywny SEO tool bot
+User-agent: AhrefsBot
+Disallow: /
+
+# SemrushBot - agresywny SEO tool bot
+User-agent: SemrushBot
+Disallow: /
+
+# DotBot - Moz crawler
+User-agent: DotBot
+Disallow: /
+
+# Baixa Saúde - potencjalny spam
+User-agent: BaiduSpider
+Disallow: /
+
+# Yandex Spider
+User-agent: Yandex
+Allow: /
+
+# Innych potencjalnych spamów
+User-agent: BadBot
+Disallow: /
+
+User-agent: EvilBot
+Disallow: /
+
+User-agent: NaughtyBot
+Disallow: /
+
+
+###############################################################################
+# MAPY WITRYN - Sitemap declarations
+###############################################################################
+
+# Główna mapa witryny
+Sitemap: https://proestatepartners.com/sitemap.xml
+
+# Dodatkowe mapy (jeśli będą)
+# Sitemap: https://proestatepartners.com/sitemap-blog.xml
+# Sitemap: https://proestatepartners.com/sitemap-images.xml
+
+
+###############################################################################
+# UWAGI I INSTRUKCJE
+###############################################################################
+
+# 1. TESTY ROBOTS.TXT:
+#    - Validator: https://www.robotstxt.org/
+#    - Google: https://search.google.com/search-console (Tools > robots.txt tester)
+#    - Bing: https://www.bing.com/webmasters/
+
+# 2. BEST PRACTICES:
+#    - Zawsze używaj HTTPS w linach Sitemap
+#    - Robots.txt jest CASE-SENSITIVE (wielkie litery mają znaczenie)
+#    - Czytaj od góry - pierwsza pasująca reguła wygrywa
+#    - User-agent: * dotyczy WSZYSTKICH botów (z wyjątkami poniżej)
+#    - Disallow: / = blok całej strony (niechcemy tego!)
+#    - Allow: i Disallow: dotyczą ścieżek (zaczynają się od /)
+
+# 3. BEZPIECZEŃSTWO:
+#    - Robots.txt jest PUBLICZNIE dostępny (bądź ostrożny z informacjami)
+#    - Nie polega się na nim do ochrony poufnych danych
+#    - Dla rzeczywistej ochrony użyj .htaccess lub authorization
+
+# 4. AKTUALIZACJA:
+#    - Po zmianach w strukturze strony - aktualizuj robots.txt
+#    - Poinformuj Google w Search Console
+#    - Czekaj 24 godzin na zmianę w indeksie
+
+# 5. LINKI:
+#    - https://www.robotstxt.org/ - Standard robots.txt
+#    - https://support.google.com/webmasters/answer/6062596 - Google Guide
+#    - https://www.bing.com/webmasters/help/robots-txt-information-4d7af023 - Bing Guide

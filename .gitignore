@@ -1,0 +1,254 @@
+# ============================================================
+# .GITIGNORE - PRO ESTATE PARTNERS
+# ============================================================
+# Pliki które NIE POWINNY być commitowane do Git
+#
+# Nigdy nie commituj:
+# - Zmiennych środowiskowych (.env)
+# - Kluczy API i tokenów
+# - Haseł
+# - Danych prywatnych
+# - Node modules (jeśli będzie)
+# - Build artifacts
+# ============================================================
+
+# ============================================================
+# ENVIRONMENT & CONFIGURATION
+# ============================================================
+.env                          # Zmienne środowiskowe (NIGDY!)
+.env.local                    # Lokalne zmienne
+.env.*.local                  # Stage-specific env files
+.env.development.local        # Development-only env
+.env.test.local               # Test-only env
+.env.production.local         # Production-only env
+
+# ============================================================
+# SECRETS & CREDENTIALS
+# ============================================================
+*.key                         # Private keys
+*.pem                         # Certificate files
+*.p12                         # PKCS12 files
+.aws/                         # AWS credentials
+.gcloud/                      # Google Cloud credentials
+credentials.json              # Google credentials
+firebase-key.json             # Firebase config
+.ssh/                         # SSH keys
+
+# ============================================================
+# IDE & EDITOR FILES
+# ============================================================
+# VS Code
+.vscode/
+.vscode/settings.json
+.vscode/extensions.json
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*~
+.*.swp
+.*.swo
+
+# Emacs
+*~
+\#*\#
+
+# TextMate
+*.tmproj
+*.tmproject
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Duplicate local image export without extension
+images/mapa-obszar
+
+# ============================================================
+# NODE & DEPENDENCIES
+# ============================================================
+node_modules/
+npm-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+package-lock.json          # Optional (zależy od preferencji)
+yarn.lock                   # Optional
+
+# ============================================================
+# BUILD & DIST
+# ============================================================
+/dist/
+/build/
+/out/
+*.min.js
+*.min.css
+.cache/
+.next/
+.nuxt/
+/coverage/
+.nyc_output/
+
+# ============================================================
+# DATABASE & DATA FILES
+# ============================================================
+*.db
+*.sqlite
+*.sqlite3
+.db
+*.sql
+dump.sql
+*.csv
+data/
+
+# ============================================================
+# LOGS & TEMPORARY FILES
+# ============================================================
+logs/
+*.log
+*.logs
+.tmp/
+tmp/
+temp/
+*.tmp
+
+# ============================================================
+# WORDPRESS (jeśli będzie)
+# ============================================================
+wp-config.php               # WordPress config (NIGDY!)
+wp-content/uploads/
+wp-content/backup-*
+wp-content/cache/
+wp-content/plugins/*/    # Jeśli używasz wtyczek
+wp-content/themes/*/     # Jeśli edytujesz tematy
+
+# ============================================================
+# SYSTEM FILES
+# ============================================================
+Thumbs.db                   # Windows
+.DS_Store                   # macOS
+ehthumbs.db
+
+# ============================================================
+# BACKUP FILES
+# ============================================================
+*.bak
+*.backup
+*~
+*.orig
+*.swp
+*.swo
+
+# ============================================================
+# COMPRESSED FILES (opcjonalne)
+# ============================================================
+# Jeśli robisz backupy, możesz je ignorować
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# ============================================================
+# OS SPECIFIC
+# ============================================================
+# Windows
+[Dd]esktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
+Thumbs.db
+
+# Linux
+.Xauthority
+.bash_history
+
+# ============================================================
+# DEPLOYMENT & HOSTING
+# ============================================================
+.deployment
+.deployments
+.gitlab-ci/
+.circleci/
+
+# ============================================================
+# DOCKER (jeśli będzie)
+# ============================================================
+docker-compose.override.yml
+.dockerignore
+
+# ============================================================
+# CI/CD SPECIFIC
+# ============================================================
+.env.ci
+.travis.yml.local
+appveyor.yml.local
+
+# ============================================================
+# EDITOR BACKUP
+# ============================================================
+*Copy*
+*copy*
+*BACKUP*
+*backup*
+
+# ============================================================
+# TESTING
+# ============================================================
+coverage/
+.coverage
+htmlcov/
+test-results/
+.pytest_cache/
+
+# ============================================================
+# CERTBOT & SSL (jeśli będzie Let's Encrypt)
+# ============================================================
+/etc/letsencrypt/
+/var/lib/letsencrypt/
+
+# ============================================================
+# CUSTOM PRO ESTATE PARTNERS
+# ============================================================
+# Wersje robocze
+/drafts/
+/temp-files/
+
+# Logi z serwera
+/server-logs/
+server.log
+
+# Dane testowe (jeśli będą)
+/test-data/
+test-database.db
+
+# Zrzuty ekranów / mockupy
+/mockups/
+/screenshots/
+
+# Notatki zespołu
+team-notes.txt
+INTERNAL.md
+
+# ============================================================
+# NOTES FOR TEAM
+# ============================================================
+# Commits - zawsze uruchamiaj:
+# 1. git status     - sprawdzenie co się zmienia
+# 2. git diff       - szczegółowy przegląd zmian
+# 3. Upewnij się że .env nie jest staged (git status)
+#
+# Jeśli niechcący commitałeś .env:
+# git rm --cached .env
+# git commit --amend -m "Remove .env from history"
