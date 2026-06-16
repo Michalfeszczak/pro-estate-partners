@@ -319,4 +319,4 @@ Otwórz: http://localhost:8001
 
 **Powodzenia! 🚀**
 
-Jeśli masz pytania, skontaktuj się z zespołem na **602 218 958**
+Jeśli masz pytania, skontaktuj się z zespołem na **602 218 958**# pro-estate-partners
