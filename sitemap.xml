@@ -18,7 +18,7 @@
        ======================================== -->
   <url>
     <loc>https://proestatepartners.com/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <mobile:mobile/>
@@ -38,6 +38,15 @@
       <image:title>Planowanie wynajmu - tablica z notatkami</image:title>
       <image:caption>Zespół Pro Estate Partners pracuje nad Twoją nieruchomością</image:caption>
     </image:image>
+  </url>
+
+  <!-- English version -->
+  <url>
+    <loc>https://proestatepartners.com/en/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <mobile:mobile/>
   </url>
 
   <!-- ========================================

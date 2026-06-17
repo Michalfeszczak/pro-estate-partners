@@ -3,10 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="index, follow">
   <title>Pro Estate Partners – Zarządzanie najmem | Szczecin i Stargard</title>
   <meta name="description" content="Pro Estate Partners – zarządzanie najmem mieszkań i lokali w Szczecinie i Stargardzie. Stała opłata, bez prowizji za znalezienie najemcy. Kontakt: 602 218 958.">
   <link rel="canonical" href="https://proestatepartners.com/">
+  <link rel="alternate" hreflang="pl" href="https://proestatepartners.com/">
+  <link rel="alternate" hreflang="en" href="https://proestatepartners.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://proestatepartners.com/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="256x256" href="images/favicon-256.png">
@@ -25,6 +28,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="styles.css">
+  <script src="language-redirect.js"></script>
 
   <script type="application/ld+json">
   {
@@ -41,7 +45,7 @@
 <body>
   <header id="header">
     <a href="#hero" class="logo">
-      <span class="logo-mark"><i class="fa-solid fa-building" aria-hidden="true"></i></span>
+      <span class="logo-mark"><img src="images/favicon-256.png" alt="" width="46" height="46" aria-hidden="true"></span>
       <span class="logo-text">
         <span class="logo-name">PRO ESTATE PARTNERS</span>
         <span class="logo-sub">Zarządzanie najmem</span>
@@ -57,7 +61,14 @@
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </nav>
-    <a href="tel:+48602218958" class="btn-phone"><i class="fa-solid fa-phone" aria-hidden="true"></i> Zadzwoń: 602 218 958</a>
+    <div class="header-actions">
+      <div class="language-switch" aria-label="Wybór języka">
+        <a href="/" lang="pl" class="active" aria-current="true" data-language-switch="pl">PL</a>
+        <span aria-hidden="true">|</span>
+        <a href="/en/" lang="en" data-language-switch="en">EN</a>
+      </div>
+      <a href="tel:+48602218958" class="btn-phone"><i class="fa-solid fa-phone" aria-hidden="true"></i> Zadzwoń: 602 218 958</a>
+    </div>
   </header>
 
   <main>
@@ -79,9 +90,12 @@
             <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Obsługa najemcy i usterek</li>
           </ul>
         </div>
-        <figure class="hero-media">
-          <img src="images/hero.webp" alt="Mieszkanie na wynajem w Szczecinie" width="800" height="600">
-        </figure>
+        <div class="hero-visual">
+          <p class="hero-callout">Twój czas ma większą wartość</p>
+          <figure class="hero-media">
+            <img src="images/hero.webp" alt="Mieszkanie na wynajem w Szczecinie" width="800" height="600">
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -125,11 +139,10 @@
           <img src="images/wnetrze.webp" alt="Zadbane wnętrze mieszkania gotowego do wynajmu" class="onas-inset" loading="lazy" width="300" height="220">
         </figure>
         <div class="onas-text">
-          <h2>Zajmujemy się najmem, żeby właściciel nie musiał zajmować się nim codziennie</h2>
-          <p>Pro Estate Partners to lokalna firma specjalizująca się w zarządzaniu najmem mieszkań i lokali na terenie Szczecina, Stargardu i najbliższych okolic.</p>
-          <p>Pomagamy właścicielom, którzy chcą wynajmować nieruchomość, ale nie mają czasu na codzienny kontakt z najemcą, pilnowanie płatności, organizowanie napraw i prowadzenie dokumentacji.</p>
-          <p>Możemy rozpocząć obsługę zarówno przed znalezieniem najemcy, jak i przejąć już trwający najem.</p>
-          <p>Każdą współpracę rozpoczynamy od rozmowy i zapoznania się z nieruchomością. Zakres obowiązków oraz zasady podejmowania decyzji ustalamy przed podpisaniem umowy.</p>
+          <h2>Kompleksowa obsługa najmu dla właścicieli nieruchomości</h2>
+          <p>Pro Estate Partners zapewnia kompleksową obsługę najmu mieszkań i lokali w Szczecinie, Stargardzie i okolicach.</p>
+          <p>Przejmujemy kontakt z najemcą, nadzór nad płatnościami, organizację napraw oraz bieżącą dokumentację, dzięki czemu właściciel zachowuje kontrolę nad nieruchomością bez konieczności zajmowania się nią każdego dnia.</p>
+          <p>Możemy przygotować lokal do wynajmu i przeprowadzić cały proces od początku albo przejąć obsługę już trwającego najmu. Zakres współpracy zawsze ustalamy indywidualnie, zgodnie z potrzebami właściciela i specyfiką nieruchomości.</p>
           <a href="tel:+48602218958" class="button"><i class="fa-solid fa-comments" aria-hidden="true"></i> Porozmawiaj o współpracy</a>
         </div>
       </div>
@@ -165,7 +178,6 @@
           </div>
         </div>
       </div>
-      <p class="section-note">Masz mieszkanie lub lokal na wynajem? Zadzwoń i opowiedz nam o swojej sytuacji.</p>
       <div class="center-cta">
         <a href="tel:+48602218958" class="button cta"><i class="fa-solid fa-phone" aria-hidden="true"></i> Zadzwoń: 602 218 958</a>
       </div>

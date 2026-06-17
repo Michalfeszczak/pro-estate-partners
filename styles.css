@@ -187,17 +187,25 @@ section {
 /* Background rhythm */
 #hero,
 #onas,
+#about,
 #oferta,
+#services,
 #zalety,
+#why-us,
 #zakres,
+#not-included,
 #faq {
   background: var(--color-white);
 }
 
 #dla-kogo,
+#who-for,
 #proces,
+#process,
 #cennik,
-#obszar {
+#pricing,
+#obszar,
+#service-area {
   background: var(--color-band);
 }
 
@@ -276,14 +284,19 @@ header.scrolled {
   width: 46px;
   height: 46px;
   border-radius: 13px;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-hover));
-  color: var(--color-white);
+  background: var(--color-white);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
   flex-shrink: 0;
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.logo-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .logo-text {
@@ -339,6 +352,39 @@ header nav a:hover::after {
   width: 100%;
 }
 
+.header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--color-text-light);
+  white-space: nowrap;
+}
+
+.language-switch a {
+  color: var(--color-text-light);
+  padding: 0.25rem 0.1rem;
+}
+
+.language-switch a:hover,
+.language-switch a.active {
+  color: var(--color-primary);
+}
+
+.language-switch a.active {
+  text-decoration: underline;
+  text-underline-offset: 0.22rem;
+}
+
 .btn-phone {
   display: inline-flex;
   align-items: center;
@@ -370,6 +416,10 @@ header nav a:hover::after {
   color: var(--color-text);
   cursor: pointer;
   padding: 0.2rem 0.4rem;
+}
+
+.text-primary {
+  color: var(--color-primary);
 }
 
 /* ==================== SHARED ICON CIRCLES ==================== */
@@ -449,6 +499,34 @@ header nav a:hover::after {
 
 .hero-badges i {
   color: var(--color-primary);
+}
+
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  position: relative;
+}
+
+.hero-callout {
+  position: absolute;
+  top: -4.6rem;
+  right: 0.35rem;
+  z-index: 2;
+  margin: 0;
+  padding: 0.72rem 1.05rem;
+  border-radius: 999px;
+  border: 1px solid rgba(82, 114, 103, 0.22);
+  background: rgba(82, 114, 103, 0.08);
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  box-shadow: 0 10px 28px rgba(37, 48, 45, 0.08);
 }
 
 .hero-media {
@@ -919,6 +997,7 @@ header nav a:hover::after {
   box-shadow: var(--shadow-lg);
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .price-rows {
@@ -948,7 +1027,7 @@ header nav a:hover::after {
   font-weight: 800;
   font-size: 1.15rem;
   text-align: right;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .price-note {
@@ -974,6 +1053,7 @@ header nav a:hover::after {
   border-radius: 22px;
   padding: clamp(2rem, 3vw, 2.75rem);
   box-shadow: var(--shadow-sm);
+  min-width: 0;
 }
 
 .responsibility-card h3 {
@@ -1377,6 +1457,11 @@ footer {
     order: 3;
   }
 
+  .header-actions {
+    margin-left: auto;
+    order: 2;
+  }
+
   .btn-phone {
     display: none;
   }
@@ -1386,8 +1471,20 @@ footer {
     gap: 2.5rem;
   }
 
-  .hero-media {
+  .hero-visual {
     order: -1;
+  }
+
+  .hero-callout {
+    position: static;
+    align-self: center;
+    margin: 0 0 1rem;
+    text-align: center;
+    font-size: 0.72rem;
+  }
+
+  .hero-media {
+    order: 0;
   }
 
   .hero-media::before {
@@ -1924,6 +2021,7 @@ footer {
   align-items: baseline;
   gap: 1rem;
   margin-bottom: 0.35rem;
+  min-width: 0;
 }
 .price-block .price-label {
   font-weight: 600;
@@ -1934,6 +2032,7 @@ footer {
   font-weight: 700;
   text-align: right;
   color: var(--color-white);
+  min-width: 0;
 }
 .price-block p {
   font-size: 0.86rem;
@@ -2052,16 +2151,19 @@ footer {
 /* ==================== POLISH WIZUALNY (2026-06) ==================== */
 
 /* --- #1 Oferta: szersze karty 2-kol, listy w kolumnach, numer, separator --- */
-#oferta .oferta-grid {
+#oferta .oferta-grid,
+#services .oferta-grid {
   grid-template-columns: repeat(2, 1fr);
   counter-reset: ofcount;
 }
-#oferta .oferta-item {
+#oferta .oferta-item,
+#services .oferta-item {
   counter-increment: ofcount;
   position: relative;
   overflow: hidden;
 }
-#oferta .oferta-item::before {
+#oferta .oferta-item::before,
+#services .oferta-item::before {
   content: counter(ofcount);
   position: absolute;
   top: 0.6rem;
@@ -2074,30 +2176,36 @@ footer {
   opacity: 0.12;
   pointer-events: none;
 }
-#oferta .oferta-item h3 {
+#oferta .oferta-item h3,
+#services .oferta-item h3 {
   padding-bottom: 0.7rem;
   margin-bottom: 0.85rem;
   border-bottom: 1px solid var(--color-border);
   padding-right: 2.5rem;
 }
-#oferta .oferta-item ul {
+#oferta .oferta-item ul,
+#services .oferta-item ul {
   display: block;
   columns: 2;
   column-gap: 2rem;
 }
-#oferta .oferta-item li {
+#oferta .oferta-item li,
+#services .oferta-item li {
   break-inside: avoid;
   margin-bottom: 0.45rem;
 }
-#oferta .oferta-item:last-child {
+#oferta .oferta-item:last-child,
+#services .oferta-item:last-child {
   grid-column: 1 / -1;
 }
-#oferta .oferta-item:last-child ul {
+#oferta .oferta-item:last-child ul,
+#services .oferta-item:last-child ul {
   columns: 3;
 }
 
 /* --- #2 Zakres odpowiedzialności: karta wyróżniona na białym tle --- */
-#zakres .responsibility-card {
+#zakres .responsibility-card,
+#not-included .responsibility-card {
   background: var(--color-band);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-md);
@@ -2160,11 +2268,14 @@ summary:focus-visible,
 
 /* --- Responsywność polishu --- */
 @media (max-width: 980px) {
-  #oferta .oferta-grid {
+  #oferta .oferta-grid,
+  #services .oferta-grid {
     grid-template-columns: 1fr;
   }
   #oferta .oferta-item ul,
-  #oferta .oferta-item:last-child ul {
+  #oferta .oferta-item:last-child ul,
+  #services .oferta-item ul,
+  #services .oferta-item:last-child ul {
     columns: 1;
   }
 }
@@ -2261,6 +2372,21 @@ summary:focus-visible,
   transform: scale(1.08);
 }
 @media (max-width: 680px) {
+  .price-block__head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .price-block .price-value,
+  .price-value {
+    text-align: left;
+  }
+
+  .pricing-card .button {
+    width: 100%;
+    white-space: normal;
+  }
+
   .fab-call {
     display: none;
   }
