@@ -150,8 +150,8 @@ function initScrollToTop() {
   button.setAttribute('aria-label', 'Scroll to top');
   button.style.cssText = `
     position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 6.5rem;
+    right: 2.35rem;
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -226,60 +226,6 @@ if ('IntersectionObserver' in window) {
 
   document.querySelectorAll('img[data-src]').forEach(img => imageObserver.observe(img));
 }
-
-/* ==================== SCROLL TO TOP BUTTON ==================== */
-function createScrollToTopButton() {
-  const button = document.createElement('button');
-  button.id = 'scroll-to-top';
-  button.innerHTML = '↑';
-  button.setAttribute('aria-label', 'Scroll to top');
-  button.style.cssText = `
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: var(--color-primary);
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    display: none;
-    z-index: 99;
-    transition: all 0.3s ease;
-  `;
-
-  document.body.appendChild(button);
-
-  window.addEventListener('scroll', function() {
-    if (window.pageYOffset > 300) {
-      button.style.display = 'block';
-    } else {
-      button.style.display = 'none';
-    }
-  });
-
-  button.addEventListener('click', function() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-  button.addEventListener('mouseenter', function() {
-    this.style.backgroundColor = 'var(--color-primary-hover)';
-    this.style.transform = 'scale(1.1)';
-  });
-
-  button.addEventListener('mouseleave', function() {
-    this.style.backgroundColor = 'var(--color-primary)';
-    this.style.transform = 'scale(1)';
-  });
-}
-
-// Initialize scroll to top button
-document.addEventListener('DOMContentLoaded', createScrollToTopButton);
 
 /* ==================== ANALYTICS & TRACKING INITIALIZATION ==================== */
 
