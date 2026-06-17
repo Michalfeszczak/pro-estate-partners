@@ -1387,11 +1387,6 @@ footer {
   margin-bottom: 0;
 }
 
-/* ==================== MOBILE CALL BAR ==================== */
-.mobile-call-bar {
-  display: none;
-}
-
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 980px) {
   header nav {
@@ -1532,31 +1527,6 @@ footer {
     gap: 1.75rem;
   }
 
-  .mobile-call-bar {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 200;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    padding: 0.95rem;
-    background: var(--color-primary);
-    color: var(--color-white);
-    font-family: var(--font-heading);
-    font-weight: 700;
-    box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.18);
-  }
-
-  .mobile-call-bar:hover {
-    color: var(--color-white);
-  }
-
-  body {
-    padding-bottom: 3.5rem;
-  }
 }
 
 /* ==================== LEGAL PAGES (Polityka / Regulamin / Cookies) ==================== */
@@ -2355,10 +2325,6 @@ summary:focus-visible,
   .pricing-card .button {
     width: 100%;
     white-space: normal;
-  }
-
-  .fab-call {
-    display: none;
   }
 }
 
