@@ -466,6 +466,14 @@ header nav a:hover::after {
   color: var(--color-primary);
 }
 
+.hero-subheading {
+  max-width: 34rem;
+  margin: 0 0 1.35rem;
+  color: var(--color-text);
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  line-height: 1.18;
+}
+
 .hero-text > p {
   font-size: 1.05rem;
   max-width: 33rem;
@@ -499,34 +507,6 @@ header nav a:hover::after {
 
 .hero-badges i {
   color: var(--color-primary);
-}
-
-.hero-visual {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 0;
-  position: relative;
-}
-
-.hero-callout {
-  position: absolute;
-  top: -4.6rem;
-  right: 0.35rem;
-  z-index: 2;
-  margin: 0;
-  padding: 0.72rem 1.05rem;
-  border-radius: 999px;
-  border: 1px solid rgba(82, 114, 103, 0.22);
-  background: rgba(82, 114, 103, 0.08);
-  color: var(--color-primary);
-  font-family: var(--font-heading);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  line-height: 1.2;
-  text-transform: uppercase;
-  box-shadow: 0 10px 28px rgba(37, 48, 45, 0.08);
 }
 
 .hero-media {
@@ -1471,20 +1451,8 @@ footer {
     gap: 2.5rem;
   }
 
-  .hero-visual {
-    order: -1;
-  }
-
-  .hero-callout {
-    position: static;
-    align-self: center;
-    margin: 0 0 1rem;
-    text-align: center;
-    font-size: 0.72rem;
-  }
-
   .hero-media {
-    order: 0;
+    order: -1;
   }
 
   .hero-media::before {
