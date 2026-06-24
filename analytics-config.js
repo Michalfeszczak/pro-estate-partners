@@ -35,7 +35,7 @@ const AnalyticsConfig = {
   BUSINESS_NAME: 'Pro Estate Partners',
   BUSINESS_PHONE: '+48602218958',
   BUSINESS_ADDRESS: 'Szczecin, Polska',
-  BUSINESS_URL: 'https://proestatepartners.com',
+  BUSINESS_URL: 'https://proestatepartners.pl',
   BUSINESS_CATEGORY: 'Zarządzanie Nieruchomościami',
 
   // ========== GOOGLE SITE KIT ==========

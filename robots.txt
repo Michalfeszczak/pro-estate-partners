@@ -1,6 +1,6 @@
 ###############################################################################
 # ROBOTS.TXT - PRO ESTATE PARTNERS
-# https://proestatepartners.com/robots.txt
+# https://proestatepartners.pl/robots.txt
 #
 # Plik kontroluje dostęp crawlerów (botów) wyszukiwarek do strony.
 # Format: https://www.robotstxt.org/
@@ -67,8 +67,8 @@ Allow: *.webp
 Crawl-delay: 0
 
 # Preferowana wersja strony (z lub bez www)
-# Jeśli używasz www.proestatepartners.com, zmień poniżej
-Prefer: https://proestatepartners.com
+# Jeśli używasz www.proestatepartners.pl, zmień poniżej
+Prefer: https://proestatepartners.pl
 
 
 ###############################################################################
@@ -156,11 +156,11 @@ Disallow: /
 ###############################################################################
 
 # Główna mapa witryny
-Sitemap: https://proestatepartners.com/sitemap.xml
+Sitemap: https://proestatepartners.pl/sitemap.xml
 
 # Dodatkowe mapy (jeśli będą)
-# Sitemap: https://proestatepartners.com/sitemap-blog.xml
-# Sitemap: https://proestatepartners.com/sitemap-images.xml
+# Sitemap: https://proestatepartners.pl/sitemap-blog.xml
+# Sitemap: https://proestatepartners.pl/sitemap-images.xml
 
 
 ###############################################################################

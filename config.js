@@ -41,7 +41,7 @@ const DEFAULTS = {
   VERBOSE_LOGGING: false,
 
   // Domain
-  DOMAIN: 'https://proestatepartners.com',
+  DOMAIN: 'https://proestatepartners.pl',
   DOMAIN_LOCAL: 'http://localhost:8001',
   CURRENT_DOMAIN: window.location.origin,
 
@@ -65,7 +65,7 @@ const DEFAULTS = {
 
   // Contact Info
   PHONE_NUMBER: '+48602218958',
-  EMAIL: 'info@proestatepartners.com',
+  EMAIL: 'info@proestatepartners.pl',
   ADDRESS: 'Szczecin, Polska',
 
   // Feature Flags
@@ -90,7 +90,7 @@ const DEFAULTS = {
   ZAPIER_WEBHOOK_URL: '', // Wypełnij w .env
 
   // WordPress
-  WP_API_URL: 'https://proestatepartners.com/wp-json',
+  WP_API_URL: 'https://proestatepartners.pl/wp-json',
   WP_API_KEY: '', // Wypełnij w .env
 
   // Maintenance

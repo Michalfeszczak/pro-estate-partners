@@ -17,24 +17,24 @@
        STRONA GŁÓWNA (Priority: 1.0 - najważniejsza)
        ======================================== -->
   <url>
-    <loc>https://proestatepartners.com/</loc>
+    <loc>https://proestatepartners.pl/</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <mobile:mobile/>
     <!-- Zdjęcia na stronie głównej (opcjonalne) -->
     <image:image>
-      <image:loc>https://proestatepartners.com/images/hero-nieruchomosc.jpg</image:loc>
+      <image:loc>https://proestatepartners.pl/images/hero-nieruchomosc.jpg</image:loc>
       <image:title>Nowoczesny dom z basenem</image:title>
       <image:caption>Przykładowa nieruchomość zarządzana przez Pro Estate Partners</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://proestatepartners.com/images/klucze-mieszkania.jpg</image:loc>
+      <image:loc>https://proestatepartners.pl/images/klucze-mieszkania.jpg</image:loc>
       <image:title>Klucze do mieszkania w dłoni</image:title>
       <image:caption>Symbolika przekazania nieruchomości do wynajmu</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://proestatepartners.com/images/planowanie-projektu.jpg</image:loc>
+      <image:loc>https://proestatepartners.pl/images/planowanie-projektu.jpg</image:loc>
       <image:title>Planowanie wynajmu - tablica z notatkami</image:title>
       <image:caption>Zespół Pro Estate Partners pracuje nad Twoją nieruchomością</image:caption>
     </image:image>
@@ -42,7 +42,7 @@
 
   <!-- English version -->
   <url>
-    <loc>https://proestatepartners.com/en/</loc>
+    <loc>https://proestatepartners.pl/en/</loc>
     <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -55,7 +55,7 @@
 
   <!-- Polityka Prywatności -->
   <url>
-    <loc>https://proestatepartners.com/polityka-prywatnosci.html</loc>
+    <loc>https://proestatepartners.pl/polityka-prywatnosci.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -64,7 +64,7 @@
 
   <!-- Regulamin Usług -->
   <url>
-    <loc>https://proestatepartners.com/regulamin.html</loc>
+    <loc>https://proestatepartners.pl/regulamin.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
@@ -73,7 +73,7 @@
 
   <!-- Polityka Cookies -->
   <url>
-    <loc>https://proestatepartners.com/cookies.html</loc>
+    <loc>https://proestatepartners.pl/cookies.html</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
@@ -87,7 +87,7 @@
 
   <!-- Sekcja: O nas -->
   <url>
-    <loc>https://proestatepartners.com/#onas</loc>
+    <loc>https://proestatepartners.pl/#onas</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -96,7 +96,7 @@
 
   <!-- Sekcja: Oferta -->
   <url>
-    <loc>https://proestatepartners.com/#oferta</loc>
+    <loc>https://proestatepartners.pl/#oferta</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -105,7 +105,7 @@
 
   <!-- Sekcja: Proces -->
   <url>
-    <loc>https://proestatepartners.com/#proces</loc>
+    <loc>https://proestatepartners.pl/#proces</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -114,7 +114,7 @@
 
   <!-- Sekcja: Dlaczego my? -->
   <url>
-    <loc>https://proestatepartners.com/#zalety</loc>
+    <loc>https://proestatepartners.pl/#zalety</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -123,7 +123,7 @@
 
   <!-- Sekcja: Cennik -->
   <url>
-    <loc>https://proestatepartners.com/#cennik</loc>
+    <loc>https://proestatepartners.pl/#cennik</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -132,7 +132,7 @@
 
   <!-- Sekcja: FAQ -->
   <url>
-    <loc>https://proestatepartners.com/#faq</loc>
+    <loc>https://proestatepartners.pl/#faq</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -141,7 +141,7 @@
 
   <!-- Sekcja: Kontakt -->
   <url>
-    <loc>https://proestatepartners.com/#kontakt</loc>
+    <loc>https://proestatepartners.pl/#kontakt</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -186,10 +186,10 @@
   6. REJESTRACJA W GOOGLE SEARCH CONSOLE:
      - https://search.google.com/search-console
      - Przejdź do: Mapy witryn (Sitemaps)
-     - Dodaj URL: https://proestatepartners.com/sitemap.xml
+     - Dodaj URL: https://proestatepartners.pl/sitemap.xml
      - Google automatycznie zacznie śledzić strony
 
   7. ROBOTS.TXT:
      - Upewnij się, że robots.txt zawiera:
-     - Sitemap: https://proestatepartners.com/sitemap.xml
+     - Sitemap: https://proestatepartners.pl/sitemap.xml
 -->
