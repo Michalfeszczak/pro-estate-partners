@@ -130,14 +130,7 @@ function initNavigation() {
     });
 
     navLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === '#' + currentSection) {
-        link.style.color = 'var(--color-primary)';
-        link.style.fontWeight = '600';
-      } else {
-        link.style.color = 'var(--color-text)';
-        link.style.fontWeight = '500';
-      }
+      link.classList.toggle('is-active', link.getAttribute('href') === '#' + currentSection);
     });
   }, { passive: true });
 }

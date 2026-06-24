@@ -162,6 +162,9 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
+  <!-- Pasek postępu scrolla -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <header id="header">
     <a href="#hero" class="logo">
       <span class="logo-mark"><img src="images/favicon-256.png" alt="" width="46" height="46" aria-hidden="true"></span>
@@ -478,6 +481,53 @@
       </div>
     </section>
 
+    <!-- PORÓWNANIE: samodzielnie vs z nami -->
+    <section id="porownanie" aria-label="Najem samodzielnie a z Pro Estate Partners">
+      <h2 class="section-title">Najem samodzielnie czy z nami?</h2>
+      <div class="compare">
+        <div class="compare-head" aria-hidden="true">
+          <span class="compare-aspect"></span>
+          <span class="compare-col compare-col--self">Najem samodzielnie</span>
+          <span class="compare-col compare-col--us">Z Pro Estate Partners</span>
+        </div>
+        <ul class="compare-rows">
+          <li class="compare-row">
+            <span class="compare-aspect">Kontakt z najemcą i zgłoszenia</span>
+            <span class="compare-cell compare-cell--self"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Ty, o każdej porze</span>
+            <span class="compare-cell compare-cell--us"><i class="fa-solid fa-check" aria-hidden="true"></i> My, na bieżąco</span>
+          </li>
+          <li class="compare-row">
+            <span class="compare-aspect">Pilnowanie płatności i rozliczeń</span>
+            <span class="compare-cell compare-cell--self"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Sam kontrolujesz terminy</span>
+            <span class="compare-cell compare-cell--us"><i class="fa-solid fa-check" aria-hidden="true"></i> Monitoring i zestawienia</span>
+          </li>
+          <li class="compare-row">
+            <span class="compare-aspect">Naprawy i fachowcy</span>
+            <span class="compare-cell compare-cell--self"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Szukasz i dzwonisz sam</span>
+            <span class="compare-cell compare-cell--us"><i class="fa-solid fa-check" aria-hidden="true"></i> Organizujemy za Ciebie</span>
+          </li>
+          <li class="compare-row">
+            <span class="compare-aspect">Prezentacje i szukanie najemcy</span>
+            <span class="compare-cell compare-cell--self"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Twój czas i dojazdy</span>
+            <span class="compare-cell compare-cell--us"><i class="fa-solid fa-check" aria-hidden="true"></i> Bierzemy na siebie</span>
+          </li>
+          <li class="compare-row">
+            <span class="compare-aspect">Dokumentacja i porządek</span>
+            <span class="compare-cell compare-cell--self"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Rozproszone pliki i maile</span>
+            <span class="compare-cell compare-cell--us"><i class="fa-solid fa-check" aria-hidden="true"></i> Komplet w jednym miejscu</span>
+          </li>
+          <li class="compare-row">
+            <span class="compare-aspect">Twój czas i spokój</span>
+            <span class="compare-cell compare-cell--self"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Najem jak drugi etat</span>
+            <span class="compare-cell compare-cell--us"><i class="fa-solid fa-check" aria-hidden="true"></i> Zachowujesz kontrolę bez obowiązków</span>
+          </li>
+        </ul>
+      </div>
+      <div class="center-cta">
+        <a href="tel:+48602218958" class="button cta"><i class="fa-solid fa-phone" aria-hidden="true"></i> Zadzwoń: 602 218 958</a>
+      </div>
+    </section>
+
     <!-- OPINIE (KARUZELA) -->
     <!--
       UWAGA: poniższe opinie są DEMONSTRACYJNE (makieta) — nie są prawdziwymi
@@ -743,7 +793,11 @@
         <p>Masz mieszkanie lub lokal na wynajem w Szczecinie albo Stargardzie?</p>
         <p>Zadzwoń i opowiedz nam o nieruchomości. Podczas rozmowy ustalimy jej lokalizację, aktualną sytuację i oczekiwany zakres obsługi.</p>
         <p class="final-cta__contact"><span>Kontakt</span><a href="tel:+48602218958">602 218 958</a></p>
-        <a href="tel:+48602218958" class="button cta"><i class="fa-solid fa-phone" aria-hidden="true"></i> Zadzwoń: 602 218 958</a>
+        <div class="final-cta__actions">
+          <a href="tel:+48602218958" class="button cta"><i class="fa-solid fa-phone" aria-hidden="true"></i> Zadzwoń: 602 218 958</a>
+          <a href="https://wa.me/48602218958?text=Dzie%C5%84%20dobry%2C%20mam%20pytanie%20o%20zarz%C4%85dzanie%20najmem%20mojego%20mieszkania." class="button button--whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Napisz na WhatsApp</a>
+          <a href="sms:+48602218958?body=Dzie%C5%84%20dobry%2C%20mam%20pytanie%20o%20zarz%C4%85dzanie%20najmem." class="button button--sms"><i class="fa-solid fa-comment-sms" aria-hidden="true"></i> Wyślij SMS</a>
+        </div>
       </div>
     </section>
   </main>
@@ -841,6 +895,22 @@
           }
         });
       });
+
+      // Pasek postępu scrolla
+      var bar = document.getElementById('scrollProgress');
+      if (bar) {
+        var ticking = false;
+        function updateBar() {
+          var st = window.scrollY || window.pageYOffset || 0;
+          var max = document.documentElement.scrollHeight - window.innerHeight;
+          bar.style.width = (max > 0 ? Math.min(100, st / max * 100) : 0) + '%';
+          ticking = false;
+        }
+        window.addEventListener('scroll', function () {
+          if (!ticking) { ticking = true; requestAnimationFrame(updateBar); }
+        }, { passive: true });
+        updateBar();
+      }
 
       // Głębokość scrolla (25 / 50 / 75 / 100%)
       var marks = [25, 50, 75, 100], hit = {};

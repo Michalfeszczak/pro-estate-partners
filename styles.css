@@ -2476,3 +2476,170 @@ summary:focus-visible,
   vertical-align: middle;
   white-space: nowrap;
 }
+
+/* ==================== PASEK POSTĘPU + AKTYWNA NAWIGACJA ==================== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  z-index: 300;
+  transition: width 0.05s linear;
+}
+
+header nav a.is-active {
+  color: var(--color-primary);
+}
+header nav a.is-active::after {
+  width: 100%;
+}
+
+/* ==================== PRZYCISKI WHATSAPP / SMS ==================== */
+.final-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.button--whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+.button--whatsapp:hover {
+  background: #1da851;
+  color: #fff;
+}
+.button--sms {
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+.button--sms:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+/* ==================== TABELA PORÓWNAWCZA ==================== */
+.compare {
+  max-width: 940px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.compare-head,
+.compare-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  align-items: stretch;
+}
+.compare-head {
+  background: var(--color-band);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+.compare-head .compare-col {
+  padding: 1rem 1.15rem;
+}
+.compare-col--us {
+  color: var(--color-primary);
+}
+.compare-rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.compare-row + .compare-row,
+.compare-rows {
+  border-top: 1px solid var(--color-border);
+}
+.compare-aspect {
+  padding: 0.95rem 1.15rem;
+  font-weight: 600;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+}
+.compare-cell {
+  padding: 0.95rem 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+.compare-cell--self {
+  color: var(--color-text-light);
+}
+.compare-cell--self i {
+  color: #c0564b;
+}
+.compare-cell--us {
+  background: var(--color-primary-tint);
+  color: var(--color-text);
+  font-weight: 600;
+}
+.compare-cell--us i {
+  color: var(--color-primary);
+}
+
+@media (max-width: 720px) {
+  .compare-head {
+    display: none;
+  }
+  .compare-row {
+    grid-template-columns: 1fr;
+  }
+  .compare-aspect {
+    background: var(--color-band);
+    font-weight: 700;
+  }
+  .compare-cell--self::before {
+    content: "Samodzielnie: ";
+    font-weight: 600;
+    color: var(--color-text-light);
+  }
+  .compare-cell--us::before {
+    content: "Z nami: ";
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+}
+
+/* ==================== STRONA 404 ==================== */
+.error-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(2.5rem, 6vw, 5rem) 1.5rem;
+}
+.error-card {
+  max-width: 560px;
+}
+.error-code {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(4rem, 14vw, 7rem);
+  line-height: 1;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+.error-card h1 {
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  margin-bottom: 0.85rem;
+}
+.error-card p {
+  margin-bottom: 1.75rem;
+}
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
