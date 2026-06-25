@@ -186,6 +186,8 @@ section {
 
 /* Background rhythm */
 #hero,
+#dochod-pasywny,
+#czas,
 #onas,
 #about,
 #oferta,
@@ -198,8 +200,10 @@ section {
   background: var(--color-white);
 }
 
+#liczby,
 #dla-kogo,
 #who-for,
+#porownanie,
 #proces,
 #process,
 #opinie,
@@ -2657,4 +2661,207 @@ header nav a.is-active::after {
 .cookie-backdrop.is-visible {
   opacity: 1;
   visibility: visible;
+}
+
+/* ==================== NOWE SEKCJE SPRZEDAŻOWE (2026-06) ==================== */
+
+/* Podtytuł pod section-title */
+.section-lead {
+  max-width: 780px;
+  margin: -1.75rem auto 2.75rem;
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+/* --- Pasek liczb --- */
+.stats-bar {
+  max-width: var(--container);
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.stat {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  padding: 1.6rem 1.2rem;
+  text-align: center;
+  box-shadow: 0 6px 22px rgba(37, 48, 45, 0.06);
+}
+.stat-num {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  color: var(--color-primary);
+  line-height: 1.1;
+  margin-bottom: 0.45rem;
+}
+.stat-label {
+  display: block;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+@media (max-width: 860px) { .stats-bar { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 440px) { .stats-bar { grid-template-columns: 1fr; } }
+
+/* --- Sekcja emocjonalna --- */
+.emotion-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+.emotion-inner h2 { margin-bottom: 1.25rem; }
+.emotion-inner p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 1.1rem;
+}
+.emotion-highlight {
+  margin-top: 1.6rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  background: var(--color-band);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 12px 12px 0;
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+/* --- Kalkulator / tabela czasu --- */
+.time-table {
+  max-width: 820px;
+  margin: 0 auto;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+.time-row:first-child { border-top: none; }
+.time-row--head {
+  background: var(--color-band);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-text);
+}
+.time-val {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+.time-row--total {
+  background: var(--color-primary-tint);
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+.time-row--total .time-val { color: var(--color-primary-hover); }
+.time-summary {
+  max-width: 820px;
+  margin: 1.5rem auto 0;
+  text-align: center;
+  color: var(--color-text);
+  font-size: 1.05rem;
+}
+.time-note {
+  max-width: 820px;
+  margin: 1rem auto 0;
+  text-align: center;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-text-light);
+}
+
+/* --- Pasek przesuwany (marquee) --- */
+.marquee {
+  background: linear-gradient(140deg, var(--color-primary), var(--color-primary-hover));
+  overflow: hidden;
+  padding: 0.9rem 0;
+}
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 32s linear infinite;
+}
+.marquee-track span {
+  color: rgba(255, 255, 255, 0.95);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+}
+.marquee-dot { color: var(--color-accent); }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+/* ==================== TABELA PORÓWNAWCZA — MOBILE (czytelne karty) ==================== */
+@media (max-width: 720px) {
+  .compare {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+  .compare-head { display: none; }
+  .compare-rows { border: none; }
+  .compare-row {
+    grid-template-columns: 1fr;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    box-shadow: 0 6px 22px rgba(37, 48, 45, 0.06);
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  .compare-row + .compare-row { border-top: 1px solid var(--color-border); }
+  .compare-aspect {
+    background: var(--color-band);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.75rem 1.1rem;
+  }
+  .compare-cell {
+    align-items: flex-start;
+    padding: 0.8rem 1.1rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.95rem;
+  }
+  .compare-cell--us { background: var(--color-primary-tint); }
+  .compare-cell--self::before,
+  .compare-cell--us::before {
+    flex: none;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    align-self: center;
+  }
+  .compare-cell--self::before { content: "Sam"; color: #c0564b; }
+  .compare-cell--us::before { content: "My"; color: var(--color-primary); }
 }
