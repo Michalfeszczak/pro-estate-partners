@@ -1323,8 +1323,8 @@ footer {
   max-width: var(--container);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: minmax(220px, 1.4fr) repeat(4, minmax(150px, 1fr));
+  gap: 2rem;
 }
 
 .footer-brand .logo-name {

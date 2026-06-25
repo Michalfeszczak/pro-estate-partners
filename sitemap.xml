@@ -35,6 +35,38 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Landing pages SEO -->
+  <url>
+    <loc>https://proestatepartners.pl/zarzadzanie-najmem-szczecin/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://proestatepartners.pl/images/hero.webp</image:loc>
+      <image:caption>Zarządzanie najmem w Szczecinie</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://proestatepartners.pl/zarzadzanie-najmem-stargard/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://proestatepartners.pl/images/dla-kogo.webp</image:loc>
+      <image:caption>Zarządzanie najmem w Stargardzie</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://proestatepartners.pl/obsluga-najmu-mieszkan/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://proestatepartners.pl/images/wnetrze.webp</image:loc>
+      <image:caption>Obsługa najmu mieszkań</image:caption>
+    </image:image>
+  </url>
+
   <!-- Strony prawne (adresy zgodne z canonical — bez .html) -->
   <url>
     <loc>https://proestatepartners.pl/polityka-prywatnosci</loc>
