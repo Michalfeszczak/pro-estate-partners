@@ -85,6 +85,15 @@
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     } catch (e) {}
     window.dispatchEvent(new CustomEvent('pep-consent-change', { detail: data }));
+    // Zdarzenie do GTM (możliwość tagowania zgody / triggery)
+    try {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'cookie_consent',
+        consent_analytics: data.analytics ? 'granted' : 'denied',
+        consent_marketing: data.marketing ? 'granted' : 'denied'
+      });
+    } catch (e) {}
     return data;
   }
 
@@ -104,7 +113,7 @@
   };
 
   /* ---------- Budowa DOM ---------- */
-  var banner, modal, toggles = {};
+  var banner, backdrop, modal, toggles = {};
 
   function el(tag, attrs, html) {
     var n = document.createElement(tag);
@@ -134,6 +143,8 @@
 	        '</div>' +
 	      '</div>';
     document.body.appendChild(banner);
+    backdrop = el('div', { class: 'cookie-backdrop', id: 'cookieBackdrop' });
+    document.body.appendChild(backdrop);
     banner.addEventListener('click', onAction);
   }
 
@@ -179,8 +190,14 @@
   }
 
   /* ---------- Pokazywanie / ukrywanie ---------- */
-  function showBanner() { banner.classList.add('is-visible'); }
-  function hideBanner() { banner.classList.remove('is-visible'); }
+  function showBanner() {
+    banner.classList.add('is-visible');
+    if (backdrop) backdrop.classList.add('is-visible');
+  }
+  function hideBanner() {
+    banner.classList.remove('is-visible');
+    if (backdrop) backdrop.classList.remove('is-visible');
+  }
 
   function openModal() {
     var c = readConsent() || DEFAULT;
