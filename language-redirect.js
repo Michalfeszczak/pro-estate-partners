@@ -37,6 +37,10 @@
     return 'pl';
   }
 
+  function isCrawler() {
+    return /bot|crawler|spider|crawling|google|bing|yandex|duckduck|baidu|slurp|facebookexternalhit|twitterbot|linkedinbot|whatsapp/i.test(navigator.userAgent || '');
+  }
+
   function targetPath(language) {
     return language === 'en' ? englishPath : rootPath;
   }
@@ -50,7 +54,7 @@
 
   if (saved === 'en' || saved === 'pl') {
     redirectTo(saved);
-  } else if (isPolishHome && preferredBrowserLanguage() === 'en') {
+  } else if (!isCrawler() && isPolishHome && preferredBrowserLanguage() === 'en') {
     redirectTo('en');
   }
 

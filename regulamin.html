@@ -3,7 +3,100 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
+  <script>
+    (function () {
+      var host = window.location.hostname.toLowerCase();
+      if (host === 'proestatepartners.com' || host === 'www.proestatepartners.com' || host === 'www.proestatepartners.pl') {
+        window.location.replace('https://proestatepartners.pl' + window.location.pathname + window.location.search + window.location.hash);
+      }
+    })();
+  </script>
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Consent Mode v2 — domyślnie ODMOWA (RODO); aktualizowane przez baner cookies (PEPConsent) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+    (function () {
+      function apply(c) {
+        gtag('consent', 'update', {
+          'analytics_storage': c.analytics ? 'granted' : 'denied',
+          'ad_storage': c.marketing ? 'granted' : 'denied',
+          'ad_user_data': c.marketing ? 'granted' : 'denied',
+          'ad_personalization': c.marketing ? 'granted' : 'denied'
+        });
+      }
+      try {
+        var saved = JSON.parse(localStorage.getItem('pep_cookie_consent') || 'null');
+        if (saved && saved.v === 1) apply(saved);
+      } catch (e) {}
+      window.addEventListener('pep-consent-change', function (e) { if (e.detail) apply(e.detail); });
+    })();
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MF35D499');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics 4 (gtag.js) — respektuje Consent Mode powyżej -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FL89BCTKQ"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-8FL89BCTKQ');
+  </script>
+
+  <!-- Microsoft Clarity — ładowany dopiero PO zgodzie analitycznej (RODO) -->
+  <script>
+    (function () {
+      var loaded = false;
+      function loadClarity() {
+        if (loaded) return; loaded = true;
+        (function (c, l, a, r, i, t, y) {
+          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+          t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "xc4xqqze8q");
+      }
+      function check(c) { if (c && c.analytics) loadClarity(); }
+      try { check(JSON.parse(localStorage.getItem('pep_cookie_consent') || 'null')); } catch (e) {}
+      window.addEventListener('pep-consent-change', function (e) { check(e.detail); });
+    })();
+  </script>
+
+  <!-- Meta Pixel — ładowany dopiero PO zgodzie marketingowej (RODO) -->
+  <script>
+    (function () {
+      var loaded = false;
+      function loadPixel() {
+        if (loaded) return; loaded = true;
+        !function (f, b, e, v, n, t, s) {
+          if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+          if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
+          t = b.createElement(e); t.async = !0; t.src = v;
+          s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '4252402781675710');
+        fbq('track', 'PageView');
+      }
+      function check(c) { if (c && c.marketing) loadPixel(); }
+      try { check(JSON.parse(localStorage.getItem('pep_cookie_consent') || 'null')); } catch (e) {}
+      window.addEventListener('pep-consent-change', function (e) { check(e.detail); });
+    })();
+  </script>
+
   <title>Regulamin - Pro Estate Partners</title>
   <meta name="description" content="Regulamin świadczenia usług Pro Estate Partners - zarządzania nieruchomościami w Szczecinie i Stargardzie.">
   <link rel="canonical" href="https://proestatepartners.pl/regulamin">
@@ -17,6 +110,9 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF35D499"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
   <header id="header">
     <a href="index.html" class="logo">
       <span class="logo-mark"><i class="fa-solid fa-building" aria-hidden="true"></i></span>
@@ -233,9 +329,9 @@
       <div class="footer-col">
         <h4>Informacje</h4>
         <ul>
-          <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
-          <li><a href="regulamin.html">Regulamin</a></li>
-          <li><a href="cookies.html">Cookies</a></li>
+          <li><a href="/polityka-prywatnosci">Polityka prywatności</a></li>
+          <li><a href="/regulamin">Regulamin</a></li>
+          <li><a href="/cookies">Cookies</a></li>
           <li><a href="#" data-cookie-settings>Ustawienia cookies</a></li>
         </ul>
       </div>
@@ -244,11 +340,6 @@
       <p>&copy; 2026 Pro Estate Partners. Wszystkie prawa zastrzeżone.</p>
     </div>
   </footer>
-
-  <a href="tel:+48602218958" class="mobile-call-bar" aria-label="Zadzwoń: 602 218 958">
-    <i class="fa-solid fa-phone" aria-hidden="true"></i>
-    <span>Zadzwoń teraz: 602 218 958</span>
-  </a>
 
   <script src="config.js"></script>
   <script src="analytics-config.js"></script>

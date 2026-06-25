@@ -41,17 +41,17 @@ Kompletny przewodnik do tworzenia, walidacji i optymalizacji sitemap dla SEO.
 ### Dla Pro Estate Partners
 
 **Aktualne URL-y (8 stron):**
-- https://proestatepartners.com/ (główna)
-- https://proestatepartners.com/#onas (sekcja)
-- https://proestatepartners.com/#oferta (sekcja)
-- https://proestatepartners.com/#proces (sekcja)
-- https://proestatepartners.com/#zalety (sekcja)
-- https://proestatepartners.com/#cennik (sekcja)
-- https://proestatepartners.com/#faq (sekcja)
-- https://proestatepartners.com/#kontakt (sekcja)
-- https://proestatepartners.com/polityka-prywatnosci.html
-- https://proestatepartners.com/regulamin.html
-- https://proestatepartners.com/cookies.html
+- https://proestatepartners.pl/ (główna)
+- https://proestatepartners.pl/#onas (sekcja)
+- https://proestatepartners.pl/#oferta (sekcja)
+- https://proestatepartners.pl/#proces (sekcja)
+- https://proestatepartners.pl/#zalety (sekcja)
+- https://proestatepartners.pl/#cennik (sekcja)
+- https://proestatepartners.pl/#faq (sekcja)
+- https://proestatepartners.pl/#kontakt (sekcja)
+- https://proestatepartners.pl/polityka-prywatnosci.html
+- https://proestatepartners.pl/regulamin.html
+- https://proestatepartners.pl/cookies.html
 
 **Razem: 11 URL-i** ✅
 
@@ -63,7 +63,7 @@ Kompletny przewodnik do tworzenia, walidacji i optymalizacji sitemap dla SEO.
 
 #### `<loc>` - Adres URL
 ```xml
-<loc>https://proestatepartners.com/</loc>
+<loc>https://proestatepartners.pl/</loc>
 ```
 - **Wymagane**: TAK
 - **Format**: Pełny URL z https://
@@ -123,7 +123,7 @@ Kompletny przewodnik do tworzenia, walidacji i optymalizacji sitemap dla SEO.
 <urlset xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <image:image>
-      <image:loc>https://proestatepartners.com/images/photo.jpg</image:loc>
+      <image:loc>https://proestatepartners.pl/images/photo.jpg</image:loc>
       <image:title>Tytuł zdjęcia</image:title>
       <image:caption>Opis zdjęcia</image:caption>
     </image:image>
@@ -209,11 +209,11 @@ Pro Estate Partners ma 11 URL-i = OK ✅
 ### 4. Nie Duplikuj
 ```xml
 <!-- ZŁY - duplikaty -->
-<loc>https://proestatepartners.com/</loc>
-<loc>https://proestatepartners.com/index.html</loc>
+<loc>https://proestatepartners.pl/</loc>
+<loc>https://proestatepartners.pl/index.html</loc>
 
 <!-- PRAWIDŁOWY - jedno URL-u -->
-<loc>https://proestatepartners.com/</loc>
+<loc>https://proestatepartners.pl/</loc>
 ```
 
 ### 5. Sekcje (Anchory)
@@ -223,22 +223,22 @@ Pro Estate Partners ma 11 URL-i = OK ✅
 <!-- ALE - jeśli strona to SPA (single-page app), TAK -->
 
 <!-- Pro Estate Partners = SPA, więc dodajemy -->
-<loc>https://proestatepartners.com/#oferta</loc>
+<loc>https://proestatepartners.pl/#oferta</loc>
 ```
 
 ### 6. Protokół HTTPS
 ```xml
 <!-- Zawsze HTTPS, nie HTTP -->
-<loc>https://proestatepartners.com/</loc>
+<loc>https://proestatepartners.pl/</loc>
 ```
 
 ### 7. Canonical URLs
 ```xml
 <!-- Jeśli masz canonical tag w HTML -->
-<link rel="canonical" href="https://proestatepartners.com/">
+<link rel="canonical" href="https://proestatepartners.pl/">
 
 <!-- To samo URL dodaj do sitemap -->
-<loc>https://proestatepartners.com/</loc>
+<loc>https://proestatepartners.pl/</loc>
 ```
 
 ---
@@ -298,7 +298,7 @@ Jeśli zobaczyć "sitemap.xml validates" = ✅ OK
 
 ### Krok 2: Dodaj Sitemap
 1. W menu bocznym → **Mapy witryn** (Sitemaps)
-2. Wpisz URL: `https://proestatepartners.com/sitemap.xml`
+2. Wpisz URL: `https://proestatepartners.pl/sitemap.xml`
 3. Kliknij **Prześlij**
 
 ### Krok 3: Monitoruj
@@ -331,7 +331,7 @@ echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
 
 // Dodaj stronę główną
 echo '<url>' . "\n";
-echo '  <loc>https://proestatepartners.com/</loc>' . "\n";
+echo '  <loc>https://proestatepartners.pl/</loc>' . "\n";
 echo '  <lastmod>' . date('Y-m-d') . '</lastmod>' . "\n";
 echo '  <changefreq>weekly</changefreq>' . "\n";
 echo '  <priority>1.0</priority>' . "\n";
@@ -357,7 +357,7 @@ echo '</urlset>' . "\n";
 #### WordPress Automatyczne
 - Zainstaluj wtyczkę SEO (Rank Math, Yoast)
 - Wtyczka automatycznie generuje sitemap
-- URL: `https://proestatepartners.com/sitemap.xml` (automatycznie)
+- URL: `https://proestatepartners.pl/sitemap.xml` (automatycznie)
 
 ---
 
@@ -378,15 +378,15 @@ echo '</urlset>' . "\n";
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://proestatepartners.com/sitemap-pages.xml</loc>
+    <loc>https://proestatepartners.pl/sitemap-pages.xml</loc>
     <lastmod>2026-06-15</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://proestatepartners.com/sitemap-blog.xml</loc>
+    <loc>https://proestatepartners.pl/sitemap-blog.xml</loc>
     <lastmod>2026-06-15</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://proestatepartners.com/sitemap-images.xml</loc>
+    <loc>https://proestatepartners.pl/sitemap-images.xml</loc>
     <lastmod>2026-06-15</lastmod>
   </sitemap>
 </sitemapindex>

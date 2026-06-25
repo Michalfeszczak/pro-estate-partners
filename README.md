@@ -223,7 +223,7 @@ Otwórz: http://localhost:8001
    - DEBUG_MODE: false
 
 3. Dodaj stronę do Google Search Console:
-   - Zarejestruj https://proestatepartners.com
+   - Zarejestruj https://proestatepartners.pl
    - Prześlij sitemap.xml
    - Czekaj na indeksowanie (24-48h)
 
@@ -289,8 +289,8 @@ Otwórz: http://localhost:8001
 
 **Pro Estate Partners**
 - Telefon: 602 218 958
-- Strona: https://proestatepartners.com
-- Email: info@proestatepartners.com (jeśli będzie dodane)
+- Strona: https://proestatepartners.pl
+- Email: info@proestatepartners.pl (jeśli będzie dodane)
 
 ---
 

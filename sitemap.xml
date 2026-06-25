@@ -6,7 +6,7 @@
   <!-- Strona główna -->
   <url>
     <loc>https://proestatepartners.pl/</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -30,7 +30,7 @@
   <!-- Wersja angielska (po wdrożeniu /en/) -->
   <url>
     <loc>https://proestatepartners.pl/en/</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -38,19 +38,19 @@
   <!-- Strony prawne (adresy zgodne z canonical — bez .html) -->
   <url>
     <loc>https://proestatepartners.pl/polityka-prywatnosci</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://proestatepartners.pl/regulamin</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://proestatepartners.pl/cookies</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-06-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

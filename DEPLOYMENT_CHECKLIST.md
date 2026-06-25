@@ -75,7 +75,7 @@ Otwórz `.env` i wpisz wszystkie wartości:
 ```bash
 # Basics
 ENVIRONMENT=production
-DOMAIN=https://proestatepartners.com
+DOMAIN=https://proestatepartners.pl
 DEBUG_MODE=false
 
 # Phone
@@ -159,7 +159,7 @@ GOOGLE_TAG_MANAGER_ID=GTM-XXXXXXXX
 #### Krok 1: Zarejestruj Stronę
 - Przejdź: https://search.google.com/search-console
 - "Dodaj nieruchomość"
-- URL: `https://proestatepartners.com`
+- URL: `https://proestatepartners.pl`
 
 #### Krok 2: Weryfikacja
 **Opcja A: HTML Tag (polecane)**
@@ -178,7 +178,7 @@ GOOGLE_TAG_MANAGER_ID=GTM-XXXXXXXX
 
 #### Krok 3: Dodaj Sitemap
 1. Search Console → Mapy witryn
-2. Wpisz: `https://proestatepartners.com/sitemap.xml`
+2. Wpisz: `https://proestatepartners.pl/sitemap.xml`
 3. Kliknij "Prześlij"
 
 #### Krok 4: Monitoruj
@@ -198,7 +198,7 @@ GOOGLE_TAG_MANAGER_ID=GTM-XXXXXXXX
 - Kategoria: `Zarządzanie Nieruchomościami`
 - Adres: `Szczecin, Polska`
 - Telefon: `602 218 958`
-- WWW: `https://proestatepartners.com`
+- WWW: `https://proestatepartners.pl`
 - Godziny: Pon-Pt 8:00-18:00
 
 #### Krok 3: Dodaj Zdjęcia
@@ -229,7 +229,7 @@ META_PIXEL_ID=XXXXXXXXXXXXXXXXXX
 
 #### Krok 4: Verify
 - W Events Manager
-- Przejdź na: https://proestatepartners.com
+- Przejdź na: https://proestatepartners.pl
 - Powinna być wiadomość: "Test Events Received"
 
 ---
@@ -307,7 +307,7 @@ CLARITY_ID=XXXXXXXXXX
 sudo apt-get install certbot python3-certbot-apache
 
 # Generowanie certyfikatu
-sudo certbot certonly -a apache -d proestatepartners.com
+sudo certbot certonly -a apache -d proestatepartners.pl
 
 # Auto-renewal
 sudo systemctl enable certbot.timer
@@ -463,16 +463,16 @@ ls -la | grep "^\."      # Pokaż pliki ukryte
 
 ```bash
 # 1. Sprawdzenie dostępności
-curl -I https://proestatepartners.com
+curl -I https://proestatepartners.pl
 
 # 2. Sprawdzenie sitemap
-curl https://proestatepartners.com/sitemap.xml | head -20
+curl https://proestatepartners.pl/sitemap.xml | head -20
 
 # 3. Sprawdzenie robots.txt
-curl https://proestatepartners.com/robots.txt | head -10
+curl https://proestatepartners.pl/robots.txt | head -10
 
 # 4. Sprawdzenie HTTPS
-https://www.ssllabs.com/ssltest/analyze.html?d=proestatepartners.com
+https://www.ssllabs.com/ssltest/analyze.html?d=proestatepartners.pl
 ```
 
 ---
@@ -576,7 +576,7 @@ https://www.bing.com/webmasters
 #### ❌ Sitemap nie indeksuje
 ```
 1. Sprawdzić sitemap.xml czy nie ma błędów
-2. Wpisać https://proestatepartners.com/sitemap.xml w Search Console
+2. Wpisać https://proestatepartners.pl/sitemap.xml w Search Console
 3. Czekać 24-48h
 4. Sprawdzić czy strona nie ma robots.txt Disallow
 ```

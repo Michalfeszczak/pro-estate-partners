@@ -1,6 +1,6 @@
 # Streszczenie wykonawcze
 
-Pro Estate Partners to firma zarządzająca nieruchomościami (mieszkania, domy, lokale użytkowe) na terenie Szczecina i Stargardu. Przygotowana zostanie nowoczesna, jednosesyjna strona internetowa (one-page) na domenie **proestatepartners.com** (domena .pl przekierowuje do .com), prezentująca ofertę zarządzania najmem. Kluczowe cele strony to **jasna prezentacja usług**, **budowanie zaufania** (jasne warunki współpracy) i **wygoda kontaktu** (główny przycisk “Zadzwoń”). Design będzie spójny i czytelny – z białym tłem `#F7F8F5`, akcentami ciemnozielonymi `#527267` (główny kolor firmy, hover `#405D54`) oraz tekstem w kolorze grafitowym `#25302D`. Użyjemy nowoczesnych fontów *Manrope* (nagłówki) i *Inter* (treść), co poprawia czytelność na urządzeniach mobilnych. Wszystkie elementy UI (przyciski, ikony) będą mieć odpowiedni kontrast i rozmiary (WCAG AA), a obrazy – alternatywne opisy (atrybut `alt`). 
+Pro Estate Partners to firma zarządzająca nieruchomościami (mieszkania, domy, lokale użytkowe) na terenie Szczecina i Stargardu. Przygotowana zostanie nowoczesna, jednosesyjna strona internetowa (one-page) na domenie **proestatepartners.pl** (domena .com działa jako dodatkowa i przekierowuje do .pl), prezentująca ofertę zarządzania najmem. Kluczowe cele strony to **jasna prezentacja usług**, **budowanie zaufania** (jasne warunki współpracy) i **wygoda kontaktu** (główny przycisk “Zadzwoń”). Design będzie spójny i czytelny – z białym tłem `#F7F8F5`, akcentami ciemnozielonymi `#527267` (główny kolor firmy, hover `#405D54`) oraz tekstem w kolorze grafitowym `#25302D`. Użyjemy nowoczesnych fontów *Manrope* (nagłówki) i *Inter* (treść), co poprawia czytelność na urządzeniach mobilnych. Wszystkie elementy UI (przyciski, ikony) będą mieć odpowiedni kontrast i rozmiary (WCAG AA), a obrazy – alternatywne opisy (atrybut `alt`).
 
 Strona będzie **w pełni responsywna** (układ dostosowany do desktop i mobile), z prostą nawigacją (sticky header z linkami do sekcji) i widocznym nawigacyjnym paskiem “Zadzwoń” na smartfonach. Główne sekcje: Hero (nagłówek), O nas, Oferta zarządzania najmem, Proces współpracy, Zalety wyboru, Cennik i warunki, FAQ, Kontakt. Każdą sekcję wypełniamy pełną treścią zgodnie z dostarczonymi opisami (np. *“Przygotowanie lokalu do wynajmu”*, *“Uruchomienie najmu”* etc.) oraz danymi kontaktowymi (tel. **602 218 958**). Całość poprzetykana zostanie 4–5 dobrymi zdjęciami: np. wnętrz mieszkania, kluczy do lokalu, nowoczesnego budynku czy planowania projektu, każde z odpowiednim opisem (alt) w języku polskim, co dodatkowo wzmocni przekaz.
 
@@ -46,7 +46,7 @@ Opis alt można np. umieścić jako *„Klucze do mieszkania w dłoni”*, *„N
 
 Przygotowana zostanie **pełna treść każdej sekcji** w języku polskim, uwzględniająca dostarczone opisy i dane kontaktowe. Zawartość będzie optymalizowana pod frazy lokalne („zarządzanie nieruchomościami Szczecin”, „najem Stargard” itd.). Kluczowe fragmenty tekstu:
 
-- **Hero:** Silny nagłówek z hasłem typu *„Pro Estate Partners – profesjonalne zarządzanie najmem w Szczecinie i Stargardzie”*, pod nim krótkie uzupełnienie np. *„Z nami wynajem Twojej nieruchomości to spokój i zysk”*. Duży przycisk CTA: *„Zadzwoń teraz: 602 218 958”*. Może także ikona telefonu i adres domeny proestatepartners.com w widocznym miejscu.
+- **Hero:** Silny nagłówek z hasłem typu *„Pro Estate Partners – profesjonalne zarządzanie najmem w Szczecinie i Stargardzie”*, pod nim krótkie uzupełnienie np. *„Z nami wynajem Twojej nieruchomości to spokój i zysk”*. Duży przycisk CTA: *„Zadzwoń teraz: 602 218 958”*. Może także ikona telefonu i adres domeny proestatepartners.pl w widocznym miejscu.
 
 - **O nas:** Krótki opis firmy: *„Pro Estate Partners to doświadczeni zarządcy nieruchomości ze Szczecina. Oferujemy kompleksową obsługę wynajmu mieszkań, domów i lokali – od przygotowania oferty po rozliczenia najmu. Naszym celem jest maksymalna wygoda dla właściciela i bezpieczeństwo inwestycji.”* Podkreślamy region działania (Szczecin, Stargard) i wartości (profesjonalizm, partnerstwo).
 
@@ -87,7 +87,7 @@ Kod będzie lekki, semantyczny i kompatybilny z większością przeglądarek. Pr
   <title>Pro Estate Partners – Zarządzanie nieruchomościami Szczecin & Stargard</title>
   <meta name="description" content="Pro Estate Partners – kompleksowe zarządzanie najmem mieszkań i lokali we Szczecinie i Stargardzie. Kontakt: 602 218 958.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="https://proestatepartners.com/">
+  <link rel="canonical" href="https://proestatepartners.pl/">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -102,7 +102,7 @@ Kod będzie lekki, semantyczny i kompatybilny z większością przeglądarek. Pr
       "addressCountry": "PL"
     },
     "telephone": "+48602218958",
-    "url": "https://proestatepartners.com",
+    "url": "https://proestatepartners.pl",
     "openingHours": ["Mo-Fr 08:00-18:00"], 
     "description": "Zarządzanie najmem nieruchomości w Szczecinie i Stargardzie."
   }
@@ -235,10 +235,10 @@ Tabela porównawcza niektórych opcji:
 Strona będzie zoptymalizowana pod kątem wyszukiwarek:
 - **Meta tagi:** Każdy podział treści (hero, o nas itd.) ma unikalny tag `<h1>`,`<h2>`. Meta tytuł i opis zawierają słowa kluczowe „zarządzanie nieruchomościami Szczecin Stargard” i zachęcają do kliknięcia (CTA, lokalizacja).
 - **Dane strukturalne:** JSON-LD `LocalBusiness` (jak wyżej) pomoże Google lepiej zrozumieć biznes. Zawiera adres (SK, PL), telefon, nazwa. Umożliwi wyświetlenie wizytówki Google w wynikach.
-- **Mapa strony:** Plik `sitemap.xml` generowany przez wtyczkę SEO lub ręcznie, wskazujący URL sekcji. Do robots.txt dodamy linię `Sitemap: https://proestatepartners.com/sitemap.xml`, co zgłosimy w Search Console.
+- **Mapa strony:** Plik `sitemap.xml` generowany przez wtyczkę SEO lub ręcznie, wskazujący URL sekcji. Do robots.txt dodamy linię `Sitemap: https://proestatepartners.pl/sitemap.xml`, co zgłosimy w Search Console.
 - **Robots.txt:** Odpuszczamy indeksowanie stron pomocniczych (jeśli jakieś np. polityka prywatności), ale główna strona jest indeksowana. Plik robots.txt powinien zawierać link do sitemap (jak powyżej).
-- **Hreflang:** Jeśli domena .com używana jest tylko w Polsce, nie stosujemy wielojęzycznego tagu hreflang. Jeśli planowany będzie np. tłumaczony serwis, wtedy dodamy odpowiednie atrybuty.
-- **Canonical:** Link kanoniczny w `<head>` (jak w przykładzie) wskazuje na pożądaną wersję URL (.com).
+- **Hreflang:** Wersja polska i angielska korzystają z tagów `hreflang`, a domeną kanoniczną jest `.pl`.
+- **Canonical:** Link kanoniczny w `<head>` (jak w przykładzie) wskazuje na pożądaną wersję URL (.pl).
 - **Prędkość:** Stronę zoptymalizujemy (minifikacja CSS/JS, cache, kompresja obrazów). Dzięki temu wyniki Core Web Vitals będą dobre (szybkie ładowanie, stabilny interfejs). W razie potrzeby użyjemy lazy-load obrazków.
 - **Nagłówki i HTML:** Używamy semantycznych znaczników (`<header>`, `<main>`, `<section>`, `<footer>`), co dodatkowo poprawia dostępność i SEO.
 - **Responsive meta:** `viewport` w `<head>` zapewnia odpowiednie skalowanie na urządzeniach mobilnych.
@@ -299,10 +299,9 @@ graph TD
 
 Po wdrożeniu: 
 - **Testy:** Sprawdzamy stronę pod kątem zgodności z WCAG (np. narzędzie WAVE, test tab-ul), działanie na najpopularniejszych przeglądarkach i urządzeniach. Dokonujemy testów SEO (Google Lighthouse, sprawdzamy widoczność w Search Console).
-- **Wdrożenie:** Stronę umieszczamy na hostingu z obsługą PHP/MySQL (typowo LAMP). Ustawiamy stały adres domeny *.com*, konfigurujemy przekierowanie *.pl* → *.com*. Konfigurujemy SSL (Let’s Encrypt).
+- **Wdrożenie:** Stronę umieszczamy na hostingu z obsługą PHP/MySQL (typowo LAMP). Ustawiamy stały adres domeny *.pl*, konfigurujemy przekierowanie *.com* → *.pl*. Konfigurujemy SSL (Let’s Encrypt).
 - **Handover:** Dostarczamy klientowi pełny pakiet: kody źródłowe, pliki źródłowe projektu (np. paleta kolorów, źródła grafik, ewentualne pliki designu), listę zmiennych (kolory, czcionki) i instrukcje obsługi WP (jak aktualizować treść). Zawieramy też spis wtyczek i login do Google Search Console/Analytics.
 
 ## Źródła
 
 Informacje wykorzystane w specyfikacji pochodzą m.in. z dokumentacji WCAG (zalecenia kontrastów kolorów 4.5:1 oraz ważność atrybutów alt dla obrazów), artykułów branżowych o SEO/WordPress (podział i funkcje wtyczek SEO, integracja FB Pixel, zarządzanie wtyczkami cookies zgodnie z RODO) oraz rekomendacji Google dotyczących danych strukturalnych LocalBusiness i mapy strony w robots.txt. Te wytyczne stanowią podstawę techniczną i prawną projektu.  
-

@@ -114,7 +114,7 @@ META_PIXEL_ID: 'XXXXXXXXXXXXXXXXXX', // Wstaw tutaj swoje ID (16 cyfr)
 ### Krok 1: Zarejestruj stronę
 1. Przejdź na https://search.google.com/search-console
 2. Kliknij **"Dodaj nieruchomość"**
-3. Wpisz URL: `https://proestatepartners.com`
+3. Wpisz URL: `https://proestatepartners.pl`
 
 ### Krok 2: Weryfikacja własności
 Masz kilka opcji:
@@ -132,12 +132,12 @@ Masz kilka opcji:
 
 #### Opcja B: Upload pliku HTML (dla hostingu)
 1. Pobierz plik `google[kod].html`
-2. Wgraj na główny katalog strony (proestatepartners.com/)
+2. Wgraj na główny katalog strony (proestatepartners.pl/)
 3. Kliknij **"Weryfikuj"** w Search Console
 
 ### Krok 3: Dodaj sitemap
 1. W Search Console, przejdź do **Mapy witryn** (Sitemaps)
-2. Wpisz URL: `https://proestatepartners.com/sitemap.xml`
+2. Wpisz URL: `https://proestatepartners.pl/sitemap.xml`
 3. Kliknij **"Prześlij"**
 
 ### Krok 4: Monitoruj wyniki
@@ -159,7 +159,7 @@ Dodaj:
 - **Kategoria**: Zarządzanie Nieruchomościami
 - **Adres**: Szczecin, Polska
 - **Telefon**: 602 218 958
-- **Strona internetowa**: https://proestatepartners.com
+- **Strona internetowa**: https://proestatepartners.pl
 - **Godziny otwarcia**: Pon-Pt 8:00-18:00
 - **Opis**: Profesjonalne zarządzanie najmem nieruchomości w Szczecinie i Stargardzie
 
@@ -283,8 +283,8 @@ Gdy wszystko jest gotowe:
 
 2. **Wdrażanie**
    - Wgraj wszystkie pliki na serwer (včetně analytics-config.js i sitemap.xml)
-   - Upewnij się, że sitemap.xml jest dostępny na `https://proestatepartners.com/sitemap.xml`
-   - Upewnij się, że robots.txt jest dostępny na `https://proestatepartners.com/robots.txt`
+   - Upewnij się, że sitemap.xml jest dostępny na `https://proestatepartners.pl/sitemap.xml`
+   - Upewnij się, że robots.txt jest dostępny na `https://proestatepartners.pl/robots.txt`
 
 3. **Finalna weryfikacja**
    - Czekaj 24-48 godzin aż Google zaindeksuje stronę

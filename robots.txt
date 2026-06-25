@@ -4,7 +4,7 @@
 #
 # Plik kontroluje dostęp crawlerów (botów) wyszukiwarek do strony.
 # Format: https://www.robotstxt.org/
-# Ostatnia aktualizacja: 2026-06-15
+# Ostatnia aktualizacja: 2026-06-25
 ###############################################################################
 
 

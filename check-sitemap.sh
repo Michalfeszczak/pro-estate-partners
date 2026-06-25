@@ -194,7 +194,7 @@ else
         grep "Sitemap:" robots.txt
     else
         echo -e "${YELLOW}⚠ Sitemap nie jest wymieniony w robots.txt${NC}"
-        echo "  Dodaj linię: Sitemap: https://proestatepartners.com/sitemap.xml"
+        echo "  Dodaj linię: Sitemap: https://proestatepartners.pl/sitemap.xml"
     fi
 fi
 
@@ -208,7 +208,7 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 # Sprawdzenie online (jeśli localhost)
 if grep -q "localhost" sitemap.xml 2>/dev/null; then
     echo -e "${YELLOW}⚠ Sitemap zawiera localhost (test lokalny)${NC}"
-elif grep -q "proestatepartners.com" sitemap.xml; then
+elif grep -q "proestatepartners.pl" sitemap.xml; then
     echo -e "${GREEN}✓ Sitemap zawiera prawidłowe domeny${NC}"
 fi
 
@@ -228,12 +228,12 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo ""
 echo "1. Wdrażanie na produkcję:"
 echo "   - Wgraj sitemap.xml na serwer"
-echo "   - URL powinien być: https://proestatepartners.com/sitemap.xml"
+echo "   - URL powinien być: https://proestatepartners.pl/sitemap.xml"
 echo ""
 echo "2. Rejestracja w Google Search Console:"
 echo "   - Przejdź na: https://search.google.com/search-console"
 echo "   - Mapy witryn (Sitemaps) → Dodaj nową mapę"
-echo "   - Wpisz: https://proestatepartners.com/sitemap.xml"
+echo "   - Wpisz: https://proestatepartners.pl/sitemap.xml"
 echo ""
 echo "3. Monitorowanie:"
 echo "   - Czekaj 24-48 godzin na indeksowanie"
