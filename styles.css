@@ -465,6 +465,20 @@ header nav a:hover::after {
   margin-bottom: 1.1rem;
 }
 
+.city-link,
+.inline-link {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.city-link:hover,
+.inline-link:hover {
+  color: var(--color-primary-hover);
+}
+
 .hero-text h1 .accent {
   color: var(--color-primary);
 }
