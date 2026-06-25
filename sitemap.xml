@@ -67,6 +67,38 @@
     </image:image>
   </url>
 
+  <!-- Landing pages SEO — miejscowości w okolicy -->
+  <url>
+    <loc>https://proestatepartners.pl/zarzadzanie-najmem-police/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://proestatepartners.pl/zarzadzanie-najmem-goleniow/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://proestatepartners.pl/zarzadzanie-najmem-gryfino/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://proestatepartners.pl/zarzadzanie-najmem-pyrzyce/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://proestatepartners.pl/zarzadzanie-najmem-nowogard/</loc>
+    <lastmod>2026-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
   <!-- Strony prawne (adresy zgodne z canonical — bez .html) -->
   <url>
     <loc>https://proestatepartners.pl/polityka-prywatnosci</loc>
