@@ -373,7 +373,7 @@ function initAnalyticsIntegration() {
   initLinkedInInsight();
   initTikTokPixel();
 
-  // Track phone clicks
+  // Track contact clicks
   initPhoneTracking();
 
   // Log analytics status
@@ -512,48 +512,53 @@ function initTikTokPixel() {
   }
 }
 
-/* ==================== PHONE TRACKING ==================== */
+/* ==================== CONTACT TRACKING ==================== */
 function initPhoneTracking() {
-  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+  document.querySelectorAll('a[href^="tel:"], a[href^="sms:"], a[href*="wa.me/"]').forEach(link => {
     link.addEventListener('click', function() {
-      const phoneNumber = this.href;
+      const href = this.href;
+      const channel = href.startsWith('tel:') ? 'phone' : href.startsWith('sms:') ? 'sms' : 'whatsapp';
+      const eventName = channel === 'phone' ? 'phone_call' : channel === 'sms' ? 'sms_click' : 'whatsapp_click';
       const trackPhones = (typeof Config !== 'undefined') ? Config.TRACK_PHONE_CLICKS : true;
 
       if (!trackPhones) return;
 
       if (typeof Config !== 'undefined' && Config.DEBUG_MODE) {
-        console.log('📞 Phone click tracked:', phoneNumber);
+        console.log('📞 Contact click tracked:', channel, href);
       }
 
       // Google Analytics tracking
       if (typeof gtag !== 'undefined') {
-        gtag('event', 'phone_call', {
-          'phone_number': phoneNumber,
+        gtag('event', eventName, {
+          'contact_channel': channel,
+          'contact_href': href,
           'event_category': 'engagement',
-          'event_label': 'Phone Call Click'
+          'event_label': channel + ' click'
         });
       }
 
       // Meta Pixel tracking
       if (typeof fbq !== 'undefined') {
         fbq('track', 'Contact', {
-          content_name: 'Phone Call',
-          content_type: 'product'
+          content_name: channel + ' click',
+          content_category: 'rental_property_management',
+          contact_channel: channel
         });
       }
 
       // Google Tag Manager tracking
       if (typeof dataLayer !== 'undefined') {
         dataLayer.push({
-          'event': 'phone_click',
-          'phone_number': phoneNumber
+          'event': eventName,
+          'contact_channel': channel,
+          'contact_href': href
         });
       }
 
       // TikTok tracking
       if (typeof ttq !== 'undefined') {
         ttq.track('Contact', {
-          content_name: 'Phone Call'
+          content_name: channel + ' click'
         });
       }
     });
