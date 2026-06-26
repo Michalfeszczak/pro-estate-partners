@@ -252,3 +252,9 @@ INTERNAL.md
 # Jeśli niechcący commitałeś .env:
 # git rm --cached .env
 # git commit --amend -m "Remove .env from history"
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
